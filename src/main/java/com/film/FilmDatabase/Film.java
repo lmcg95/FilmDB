@@ -9,9 +9,24 @@ public class Film {
 
     ///////////////////////////ATTRIBUTES//////////////////////////////////////
     private String title;
+    private int filmID;
     private List<Actor> cast = new ArrayList();
 
     /////////////////////////CONSTRUCTORS//////////////////////////////////
+public Film(String title, int filmID){
+    this.title=title;
+    this.filmID=filmID;
 
+}
     ///////////////////////////METHODS/////////////////////////////////////////
+
+    public String getTitle(){
+    return title;
+    }
+
+    public int getFilmID(){
+    return filmID;
+    }
+
+
 }
