@@ -1,58 +1,66 @@
 package com.film.FilmDatabase;
 
-import com.google.gson.Gson;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
+@Entity
 public class Actor {
 
     ///////////////////////////ATTRIBUTES////////////////////////////////////
+@Id
+private int actor_id;
 
-    private String name;
-    private int actorID;
-    private List<Film> films = new ArrayList();
+
+    private String first_name;
+    private String last_name;
+
+
+
 
 
 
     //////////////////////////CONSTRUCTORS//////////////////////////////////
-public Actor(String name, int actorID){
-    this.name = name;
-    this.actorID = actorID;
+public Actor(String first_name, String last_name){
+    this.first_name = first_name;
+    this.last_name=last_name;
+
+
+}
+
+public Actor(){
 
 }
     ////////////////////////////METHODS////////////////////////////////////
 
-    public String getName(){
-    return name;
+    public String getFirst_name(){
+    return first_name;
+    }
+    public String getLast_name(){
+        return last_name;
     }
 
-    public int getActorID(){
-    return actorID;
+    public int getActor_id(){
+    return actor_id;
     }
-    
-    public void setName(){
-    this.name=name;
+
+    public void setActor_id(int actor_id){
+    this.actor_id = actor_id;
     }
-    
-    public void setActorID(){
-    this.actorID=actorID;
+
+    public void setFirst_name(String first_name){
+    this.first_name=first_name;
+    }
+
+    public void setLast_name(String last_name){
+        this.last_name=last_name;
     }
 
 
-    public String actorList() {
-        return "{" +
-                "\"name\"= \"" + name +
-                "\", \"actorID\"=\"" + actorID +
-                "\"}";
-    }
 
-    public String filmList(){
-        String json2 = new Gson().toJson(films);
-        return  json2;
-    }
-    
+
+
+
+
 
 
 

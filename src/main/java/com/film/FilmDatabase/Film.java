@@ -1,26 +1,30 @@
 package com.film.FilmDatabase;
 
-import com.google.gson.Gson;
-
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 
-
+@Entity
 public class Film {
 
     ///////////////////////////ATTRIBUTES//////////////////////////////////////
+@Id
+    private int film_id;
+
     private String title;
-    private int filmID;
-    private Date releaseDate;
-    private List<Actor> cast = new ArrayList();
+    private int release_year;
+
 
     /////////////////////////CONSTRUCTORS//////////////////////////////////
-public Film(String title, int filmID, Date releaseDate){
+public Film(String title,int release_year){
     this.title=title;
-    this.filmID=filmID;
-    this.releaseDate=releaseDate;
+    this.release_year = release_year;
+
+}
+
+public Film(){
 
 }
     ///////////////////////////METHODS/////////////////////////////////////////
@@ -29,32 +33,33 @@ public Film(String title, int filmID, Date releaseDate){
     return title;
     }
 
-    public int getFilmID(){
-    return filmID;
+    public int getFilm_id(){
+    return film_id;
+    }
+    
+    public int getRelease_year(){
+    return release_year;
     }
 
-    public void setTitle() {
-        this.title = title;
-    }
-    public void setFilmID(){
-    this.filmID=filmID;
+    public void setTitle(String title){
+    this.title = title;
     }
 
-
-    public String actorList(){
-        String json = new Gson().toJson(cast);
-        return  json;
+    public void setFilm_id(int film_id){
+    this.film_id = film_id;
     }
 
-
-
-    public String filmList() {
-        return "{" +
-                "\"title\"= \"" + title +
-                "\", \"filmID\"=\"" + filmID +
-                "\", \"releaseDate\"\"" + releaseDate +
-                "\"}";
+    public void setRelease_year(int release_year){
+    this.release_year = release_year;
     }
+    
+    
+
+
+
+
+
+
 
 
 
