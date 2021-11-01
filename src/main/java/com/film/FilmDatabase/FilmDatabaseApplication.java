@@ -36,13 +36,13 @@ public class FilmDatabaseApplication {
 	@GetMapping("/actorsByID")
 	public @ResponseBody
 	Optional<Actor> getAllUsers3(){
-		return actorRepository.findById(12);
+		return actorRepository.findById(1);
 	}
 
 	@GetMapping("/filmsByID")
 	public @ResponseBody
 	Optional<Film> getAllUsers4(){
-		return filmRepository.findById(12);
+		return filmRepository.findById(13);
 	}
 
 }
