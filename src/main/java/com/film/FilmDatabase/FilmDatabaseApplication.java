@@ -24,10 +24,10 @@ public class FilmDatabaseApplication {
 	}
 
 
-	//@GetMapping("/films")
-	//public @ResponseBody Iterable<Film> getAllUsers(){
-	//	return filmRepository.findAll();
-	//}
+	@GetMapping("/films")
+	public @ResponseBody Iterable<Film> getAllUsers(){
+		return filmRepository.findAll();
+	}
 
 	@GetMapping("/actors")
 	public @ResponseBody Iterable<Actor> getAllUsers2(){
