@@ -14,7 +14,7 @@
 	<name>FilmDatabase</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 
 			<sonar.organization>lmcg95</sonar.organization>
 			<sonar.host.url>https://sonarcloud.io</sonar.host.url>
@@ -93,7 +93,7 @@
 
 
 
-			
+
 
 			<plugin>
 
