@@ -18,9 +18,8 @@
 
 			<sonar.organization>lmcg95</sonar.organization>
 			<sonar.host.url>https://sonarcloud.io</sonar.host.url>
-		    
-		<maven.compiler.source>17</maven.compiler.source>
-		<maven.compiler.target>17</maven.compiler.target>
+
+
 
 	</properties>
 
@@ -64,12 +63,6 @@
 
 
 
-		<dependency>
-			<groupId>org.jacoco</groupId>
-			<artifactId>jacoco-maven-plugin</artifactId>
-			<version>0.8.7</version>
-			<scope>test</scope>
-		</dependency>
 
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
@@ -108,15 +101,14 @@
 				<executions>
 					<execution>
 						<id>prepare-agent</id>
-						<goals>
-							<goal>prepare-agent</goal>
-						</goals>
+						<goals><goal>prepare-agent</goal></goals>
+
 					</execution>
 					<execution>
 						<id>report</id>
-						<goals>
-							<goal>report</goal>
-						</goals>
+						<phase>test</phase>
+						<goals><goal>report</goal></goals>
+
 					</execution>
 				</executions>
 			</plugin>
