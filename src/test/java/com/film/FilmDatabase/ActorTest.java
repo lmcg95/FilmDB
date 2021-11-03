@@ -24,4 +24,5 @@ public class ActorTest{
         actor.setActor_id(12);
         assertEquals("The actor did not have the same ID", 12, actor.getActor_id());
     }
+
 }

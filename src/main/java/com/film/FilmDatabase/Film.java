@@ -35,6 +35,7 @@ public Film(String title,int release_year){
         this.description=description;
         this.film_id=film_id;
         this.length=length;
+        this.rating=rating;
 
     }
 
