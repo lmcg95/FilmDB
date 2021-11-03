@@ -25,4 +25,36 @@ public class ActorTest{
         assertEquals("The actor did not have the same ID", 12, actor.getActor_id());
     }
 
+    @Test
+    public void testSetFirst(){
+        Actor actor = new Actor();
+        actor.setFirst_name("Jim");
+        assertEquals("The actor did not have the same first name", "Jim", actor.getFirst_name());
+    }
+
+    @Test
+    public void testSetLast(){
+        Actor actor = new Actor();
+        actor.setLast_name("McGonnagle");
+        assertEquals("The actor did not have the same last name", "McGonnagle", actor.getLast_name());
+    }
+
+    @Test
+    public void testFirstName2(){
+        Actor actor = new Actor("Lauren", "McGonnagle", 1);
+        assertEquals("The actor did not have the same first name", "Lauren", actor.getFirst_name());
+    }
+
+    @Test
+    public void testLastName2(){
+        Actor actor = new Actor("Lauren", "McGonnagle", 1);
+        assertEquals("The actor did not have the same last name", "McGonnagle", actor.getLast_name());
+    }
+
+    @Test
+    public void testID2(){
+        Actor actor = new Actor("Lauren", "McGonnagle", 1);
+        assertEquals("The actor did not have the same ID", 1, actor.getActor_id());
+    }
+
 }

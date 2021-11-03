@@ -82,7 +82,7 @@
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-picocontainer</artifactId>
-			<version>4.3.0</version>
+			<version>7.0.0</version>
 			<scope>test</scope>
 		</dependency>
 
