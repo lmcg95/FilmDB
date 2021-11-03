@@ -49,14 +49,42 @@ public class FilmDatabaseApplication {
 
 	@PostMapping("/addFilm")
 	public @ResponseBody String addAFilm (@RequestParam String title
-			, @RequestParam int release_year) {
+			, @RequestParam int release_year, @RequestParam String description, @RequestParam int film_id, @RequestParam int length, @RequestParam String rating) {
 
 
-		Film savedFilm = new Film(title, release_year);
+		Film savedFilm = new Film(title, release_year, description, film_id, length, rating);
 		filmRepository.save(savedFilm);
 		return "Saved";
 
 	}
+
+	@PostMapping("/addActor")
+	public @ResponseBody String addAnActor (@RequestParam String first_name
+			, @RequestParam String last_name, @RequestParam int actor_id) {
+
+
+		Actor savedActor = new Actor(first_name,last_name, actor_id);
+		actorRepository.save(savedActor);
+		return "Saved";
+
+	}
+
+	@DeleteMapping("/deleteActor{actor_id}")
+	public String deleteActor(@PathVariable ("actor_id") int actor_id){
+		actorRepository.deleteById(actor_id);
+		return "Actor deleted";
+	}
+
+	@DeleteMapping("/deleteFilm{film_id}")
+	public String deleteFilm(@PathVariable ("film_id") int film_id){
+		filmRepository.deleteById(film_id);
+		return "Film deleted";
+	}
+
+
+
+
+
 
 
 

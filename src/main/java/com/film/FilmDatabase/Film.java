@@ -15,6 +15,10 @@ public class Film {
 
     private String title;
     private int release_year;
+    private String description;
+    private int length;
+    private String rating;
+
 
 
     /////////////////////////CONSTRUCTORS//////////////////////////////////
@@ -22,7 +26,17 @@ public Film(String title,int release_year){
     this.title=title;
     this.release_year = release_year;
 
+
 }
+
+    public Film(String title,int release_year, String description, int film_id, int length, String rating){
+        this.title=title;
+        this.release_year = release_year;
+        this.description=description;
+        this.film_id=film_id;
+        this.length=length;
+
+    }
 
 public Film(){
 
@@ -52,15 +66,28 @@ public Film(){
     public void setRelease_year(int release_year){
     this.release_year = release_year;
     }
-    
-    
 
+    public String getDescription() {
+        return description;
+    }
 
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
+    public int getLength() {
+        return length;
+    }
 
+    public void setLength(int length) {
+        this.length = length;
+    }
 
+    public String getRating() {
+        return rating;
+    }
 
-
-
-
+    public void setRating(String rating) {
+        this.rating = rating;
+    }
 }
