@@ -1,6 +1,6 @@
 package com.film.FilmDatabase;
 
-import com.film.FilmDatabase.Actor;
+
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

@@ -66,6 +66,7 @@
 			<scope>test</scope>
 		</dependency>
 
+
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
@@ -88,7 +89,7 @@
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.8.7</version>
+				<version>0.8.3</version>
 				<executions>
 					<execution>
 						<id>prepare-agent</id>
