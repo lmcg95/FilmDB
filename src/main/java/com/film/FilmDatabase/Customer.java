@@ -13,6 +13,7 @@ public class Customer {
     private String password;
     private String first_name;
     private String last_name;
+    private boolean privellages = Boolean.FALSE;
 
     public Customer(int customer_id, String email, String password, String first_name, String last_name) {
         this.customer_id = customer_id;
@@ -21,6 +22,8 @@ public class Customer {
         this.first_name = first_name;
         this.last_name = last_name;
     }
+
+
 
     public void Customer(){
 
@@ -64,5 +67,13 @@ public class Customer {
 
     public void setLast_name(String last_name) {
         this.last_name = last_name;
+    }
+
+    public boolean isPrivellages() {
+        return privellages;
+    }
+
+    public void setPrivellages(boolean privellages) {
+        this.privellages = privellages;
     }
 }
