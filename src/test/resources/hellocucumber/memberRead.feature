@@ -1,4 +1,4 @@
-Feature: Members can read which films are available to rent
+Feature: If an actor is on the database they can be searched for
 
   Scenario: A member can log in and see films available to rent
     Given I am a member of the rental company
