@@ -7,14 +7,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CustomerTest {
 
-    Customer customer = new Customer(1, "laurenmcgonnagle@sakilacustomer.com", "laurenmcgonnagle","Lauren", "McGonnagle");
+    Customer customer = new Customer("laurenmcgonnagle@sakilacustomer.com", "laurenmcgonnagle","Lauren", "McGonnagle");
 
 
 
-    @Test
-    void testGetCustomer_id() {
-        assertEquals(1, customer.getCustomer_id(), "The ID was not the same");
-    }
+
 
     @Test
     void testId() {

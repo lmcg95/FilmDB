@@ -14,10 +14,10 @@ public class Staff {
 
 
 
-    public Staff(int staff_id, String username, String password){
+    public Staff( String username, String password){
         this.password=password;
         this.username=username;
-        this.staff_id=staff_id;
+
     }
 
 

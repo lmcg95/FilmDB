@@ -17,6 +17,10 @@ public class FilmDatabaseApplication {
 	private FilmRepository filmRepository;
 	@Autowired
 	private ActorRepository actorRepository;
+	@Autowired
+	private StaffRepository staffRepository;
+	@Autowired
+	private CustomerRepository customerRepository;
 
 
 	public static void main(String[] args) {
@@ -52,7 +56,7 @@ public class FilmDatabaseApplication {
 			, @RequestParam int release_year, @RequestParam String description, @RequestParam int film_id, @RequestParam int length, @RequestParam String rating) {
 
 
-		Film savedFilm = new Film(title, release_year, description, film_id, length, rating);
+		Film savedFilm = new Film(title, release_year, description, length, rating);
 		filmRepository.save(savedFilm);
 		return "Saved";
 
@@ -63,7 +67,7 @@ public class FilmDatabaseApplication {
 			, @RequestParam String last_name, @RequestParam int actor_id) {
 
 
-		Actor savedActor = new Actor(first_name,last_name, actor_id);
+		Actor savedActor = new Actor(first_name,last_name);
 		actorRepository.save(savedActor);
 		return "Saved";
 
@@ -80,6 +84,10 @@ public class FilmDatabaseApplication {
 		filmRepository.deleteById(film_id);
 		return "Film deleted";
 	}
+
+
+
+
 
 
 

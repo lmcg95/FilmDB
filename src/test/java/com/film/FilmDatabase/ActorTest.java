@@ -39,22 +39,8 @@ public class ActorTest{
         assertEquals( "McGonnagle", actor.getLast_name(),"The actor did not have the same last name");
     }
 
-    @Test
-    public void testFirstName2(){
-        Actor actor = new Actor("Lauren", "McGonnagle", 1);
-        assertEquals( "Lauren", actor.getFirst_name(),"The actor did not have the same first name");
-    }
 
-    @Test
-    public void testLastName2(){
-        Actor actor = new Actor("Lauren", "McGonnagle", 1);
-        assertEquals( "McGonnagle", actor.getLast_name(),"The actor did not have the same last name");
-    }
 
-    @Test
-    public void testID2(){
-        Actor actor = new Actor("Lauren", "McGonnagle", 1);
-        assertEquals( 1, actor.getActor_id(),"The actor did not have the same ID");
-    }
+
 
 }

@@ -8,17 +8,7 @@ import com.film.FilmDatabase.Staff;
 
 public class StaffTest {
 
-    Staff staff = new Staff(21,"lauren", "1995");
-
-
-
-
-
-    @Test
-    void testGetStaff_id() {
-        assertEquals(21, staff.getStaff_id(), "not the same ID");
-    }
-
+    Staff staff = new Staff("lauren", "1995");
 
 
     @Test
@@ -46,14 +36,8 @@ public class StaffTest {
     @Test
     void testSetPassword() {
         staff.setPassword("hey");
-        assertEquals("hey",staff.getPassword(), "The password was not the same");
+        assertEquals("hey", staff.getPassword(), "The password was not the same");
     }
 
-//    @Test
-//    void isPrivellages() {
-//    }
-//
-//    @Test
-//    void setPrivellages() {
-//    }
 }
+

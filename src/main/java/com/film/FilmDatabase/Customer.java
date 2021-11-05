@@ -13,10 +13,10 @@ public class Customer {
     private String password;
     private String first_name;
     private String last_name;
-    private boolean notAdmin = Boolean.FALSE;
+    private boolean admin = Boolean.FALSE;
 
-    public Customer(int customer_id, String email, String password, String first_name, String last_name) {
-        this.customer_id = customer_id;
+    public Customer(String email, String password, String first_name, String last_name) {
+
         this.email = email;
         this.password = password;
         this.first_name = first_name;
@@ -70,11 +70,11 @@ public class Customer {
     }
 
     public boolean isNotAdmin() {
-        return notAdmin;
+        return admin;
     }
 
     public void setNotAdmin(boolean notAdmin) {
-        this.notAdmin = notAdmin;
+        this.admin = notAdmin;
     }
 
 

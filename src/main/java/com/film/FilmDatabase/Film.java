@@ -22,18 +22,15 @@ public class Film {
 
 
     /////////////////////////CONSTRUCTORS//////////////////////////////////
-public Film(String title,int release_year){
-    this.title=title;
-    this.release_year = release_year;
 
 
-}
 
-    public Film(String title,int release_year, String description, int film_id, int length, String rating){
+
+
+    public Film(String title,int release_year, String description, int length, String rating){
         this.title=title;
         this.release_year = release_year;
         this.description=description;
-        this.film_id=film_id;
         this.length=length;
         this.rating=rating;
 
