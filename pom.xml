@@ -79,12 +79,7 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>io.cucumber</groupId>
-			<artifactId>cucumber-picocontainer</artifactId>
-			<version>7.0.0</version>
-			<scope>test</scope>
-		</dependency>
+		
 
 		<dependency>
 			<groupId>io.cucumber</groupId>
@@ -93,12 +88,6 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>info.cukes</groupId>
-			<artifactId>cucumber-core</artifactId>
-			<version>1.2.5</version>
-			<scope>test</scope>
-		</dependency>
 
 		<dependency>
 			<groupId>info.cukes</groupId>
