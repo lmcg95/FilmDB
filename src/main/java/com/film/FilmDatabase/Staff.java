@@ -10,15 +10,20 @@ public class Staff {
     
     private String username;
     private String password;
-    private boolean privellages = Boolean.TRUE;
+    private boolean admin = Boolean.TRUE;
 
-    public void Staff(int staff_id, String username, String password){
+
+
+    public Staff(int staff_id, String username, String password){
         this.password=password;
         this.username=username;
         this.staff_id=staff_id;
     }
 
-    public void Staff(){}
+
+    public Staff(){
+
+    }
 
 
     public int getStaff_id() {
@@ -45,11 +50,11 @@ public class Staff {
         this.password = password;
     }
 
-    public boolean isPrivellages() {
-        return privellages;
+    public boolean isAdmin() {
+        return admin;
     }
 
-    public void setPrivellages(boolean privellages) {
-        this.privellages = privellages;
+    public void setAdmin(boolean admin) {
+        this.admin = admin;
     }
 }
