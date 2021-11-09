@@ -8,6 +8,7 @@ import com.amazonaws.services.secretsmanager.AWSSecretsManagerClientBuilder;
 import com.amazonaws.services.secretsmanager.model.*;
 
 import com.google.gson.Gson;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,6 +18,10 @@ import javax.sql.DataSource;
 
 @Configuration
 public class ApplicationConfig {
+    @Value("${cloud.aws.credentials.access-key}")
+    private String accessKey;
+    @Value("${cloud.aws.credentials.secret-key}")
+    private String secretKey;
     @Bean
     public DataSource dataSource(){
         AWSSecrets secrets = getSecret();
@@ -42,7 +47,7 @@ public class ApplicationConfig {
         // Create a Secrets Manager client
         AWSSecretsManager client  = AWSSecretsManagerClientBuilder.standard()
                 .withRegion(region)
-                .withCredentials(new AWSStaticCredentialsProvider(new BasicAWSCredentials("AKIAVABAWSH3ZJLBHGWR","TLZLbt2RKBalw4r0yaLHFQxRQh7sRljL7zjT9nE6")))
+                .withCredentials(new AWSStaticCredentialsProvider(new BasicAWSCredentials(accessKey,secretKey)))
                 .build();
 
 
