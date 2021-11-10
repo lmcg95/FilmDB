@@ -65,8 +65,7 @@ public class FilmDatabaseApplication {
 	@PostMapping("/addActor")
 	public @ResponseBody String addAnActor (@RequestParam String first_name
 			, @RequestParam String last_name) {
-
-
+		
 		Actor savedActor = new Actor(first_name,last_name);
 		actorRepository.save(savedActor);
 		return "Saved";
