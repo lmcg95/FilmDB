@@ -53,7 +53,7 @@ public class FilmDatabaseApplication {
 
 	@PostMapping("/addFilm")
 	public @ResponseBody String addAFilm (@RequestParam String title
-			, @RequestParam int release_year, @RequestParam String description, @RequestParam int film_id, @RequestParam int length, @RequestParam String rating) {
+			, @RequestParam int release_year, @RequestParam String description, @RequestParam int length, @RequestParam String rating) {
 
 
 		Film savedFilm = new Film(title, release_year, description, length, rating);
@@ -64,7 +64,7 @@ public class FilmDatabaseApplication {
 
 	@PostMapping("/addActor")
 	public @ResponseBody String addAnActor (@RequestParam String first_name
-			, @RequestParam String last_name, @RequestParam int actor_id) {
+			, @RequestParam String last_name) {
 
 
 		Actor savedActor = new Actor(first_name,last_name);
