@@ -215,7 +215,7 @@
 			</plugin>
 
 		</plugins>
-		<finalName></finalName>
+
 	</build>
 
 </project>
