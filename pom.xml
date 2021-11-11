@@ -216,6 +216,8 @@
 
 		</plugins>
 
+		<finalName>FilmDatabase-0.0.1-SNAPSHOT</finalName>
+
 
 	</build>
 
