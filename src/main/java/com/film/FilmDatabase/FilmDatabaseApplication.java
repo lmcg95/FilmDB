@@ -15,12 +15,10 @@ public class FilmDatabaseApplication {
 
 	@Autowired
 	private FilmRepository filmRepository;
+
 	@Autowired
 	private ActorRepository actorRepository;
-	@Autowired
-	private StaffRepository staffRepository;
-	@Autowired
-	private CustomerRepository customerRepository;
+
 
 
 	public static void main(String[] args) {
@@ -38,16 +36,16 @@ public class FilmDatabaseApplication {
 		return actorRepository.findAll();
 	}
 
-	@GetMapping("/actorsByID")
+	@GetMapping("/actorsByID{actor_id}")
 	public @ResponseBody
 	Optional<Actor> getAllUsers3(){
-		return actorRepository.findById(1);
+		return actorRepository.findById(201);
 	}
 
 	@GetMapping("/filmsByID")
 	public @ResponseBody
 	Optional<Film> getAllUsers4(){
-		return filmRepository.findById(13);
+		return filmRepository.findById(10);
 	}
 
 

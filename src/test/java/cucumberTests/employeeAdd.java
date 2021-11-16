@@ -1,7 +1,6 @@
 package cucumberTests;
 import com.film.FilmDatabase.Film;
 import com.film.FilmDatabase.FilmRepository;
-import com.film.FilmDatabase.Staff;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
