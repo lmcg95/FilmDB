@@ -38,14 +38,14 @@ public class FilmDatabaseApplication {
 
 	@GetMapping("/actorsByID{actor_id}")
 	public @ResponseBody
-	Optional<Actor> getAllUsers3(){
-		return actorRepository.findById(201);
+	Optional<Actor> getAllUsers3(@PathVariable ("actor_id") int actor_id){
+		return actorRepository.findById(actor_id);
 	}
 
-	@GetMapping("/filmsByID")
+	@GetMapping("/filmsByID{film_id")
 	public @ResponseBody
-	Optional<Film> getAllUsers4(){
-		return filmRepository.findById(10);
+	Optional<Film> getAllUsers4(@PathVariable ("film_id") int film_id){
+		return filmRepository.findById(film_id);
 	}
 
 
