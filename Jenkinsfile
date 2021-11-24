@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        maven "MavenInstall"
+        maven "Maven"
         jdk "JDK"
     }
     stages {
@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                dir("/var/lib/jenkins/workspace/FullStackApp-TSI/") {
+                dir("/var/lib/jenkins/workspace/FullStackApp-TSI") {
                 sh 'mvn -B -DskipTests clean package'
                 }
             }
