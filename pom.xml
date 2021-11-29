@@ -15,10 +15,13 @@
 	<name>FilmDatabase</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>11</java.version>
 		<sonar.organization>lmcg95</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
-		<sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+		<sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/site/jacoco/jacoco.xml
+		</sonar.coverage.jacoco.xmlReportPaths>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
 	</properties>
 
 
@@ -64,18 +67,18 @@
 			<scope>runtime</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.13.2</version>
-			<scope>test</scope>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>junit</groupId>-->
+<!--			<artifactId>junit</artifactId>-->
+<!--			<version>4.13.2</version>-->
+<!--			<scope>test</scope>-->
+<!--		</dependency>-->
 
 
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
-			<version>7.0.0</version>
+			<version>5.6.0</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -84,32 +87,32 @@
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-junit</artifactId>
-			<version>7.0.0</version>
+			<version>5.6.0</version>
 			<scope>test</scope>
 		</dependency>
 
 
-		<dependency>
-			<groupId>info.cukes</groupId>
-			<artifactId>cucumber-junit</artifactId>
-			<version>1.2.5</version>
-			<scope>test</scope>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>info.cukes</groupId>-->
+<!--			<artifactId>cucumber-junit</artifactId>-->
+<!--			<version>1.2.5</version>-->
+<!--			<scope>test</scope>-->
+<!--		</dependency>-->
 
-		<dependency>
-			<groupId>info.cukes</groupId>
-			<artifactId>cucumber-java</artifactId>
-			<version>1.2.5</version>
-			<scope>test</scope>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>info.cukes</groupId>-->
+<!--			<artifactId>cucumber-java</artifactId>-->
+<!--			<version>1.2.5</version>-->
+<!--			<scope>test</scope>-->
+<!--		</dependency>-->
 
 
-		<dependency>
-			<groupId>info.cukes</groupId>
-			<artifactId>cucumber-spring</artifactId>
-			<version>1.2.5</version>
-			<scope>test</scope>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>info.cukes</groupId>-->
+<!--			<artifactId>cucumber-spring</artifactId>-->
+<!--			<version>1.2.5</version>-->
+<!--			<scope>test</scope>-->
+<!--		</dependency>-->
 
 		<dependency>
 			<groupId>io.cucumber</groupId>
@@ -118,6 +121,12 @@
 			<scope>test</scope>
 		</dependency>
 
+<!--		<dependency>-->
+<!--			<groupId>info.cukes</groupId>-->
+<!--			<artifactId>cucumber-core</artifactId>-->
+<!--			<version>1.2.5</version>-->
+<!--			<scope>test</scope>-->
+<!--		</dependency>-->
 
 		<dependency>
 			<groupId>org.jacoco</groupId>
