@@ -23,26 +23,34 @@ public class userAdd {
 
 private Film testFilm;
 
-@Given("I have all of the information required about the film")
-    public void haveAllInfoToAdd(){
 
 
-}
 
-@When("I try to add the film with title {string}, release year {int}, length {int}, description {string}, rating {string}")
-    public void inputInformation(String title, int release_year, String description, int length, String rating){
-        testFilm = new Film(title, release_year, description, length, rating);
-        testFilmRepository.save(testFilm);
+    @Given("I have all of the information required about the film")
+    public void i_have_all_of_the_information_required_about_the_film() {
+        // Write code here that turns the phrase above into concrete actions
+
     }
 
-    @Then("The new film will be added to the database with title {string}, release year {int}, length {int}, description {string}, rating {string}")
-    public void filmAdded(String title, int release_year, String description, int length, String rating, String string){
-    int newID = testFilmRepository.searchByTitleLike(title).get(0).getFilm_id();
-    assertEquals(testFilmRepository.findById(newID).get().getTitle(), title);
-    assertEquals(testFilmRepository.findById(newID).get().getRelease_year(), release_year);
-    assertEquals(testFilmRepository.findById(newID).get().getDescription(), description);
-    assertEquals(testFilmRepository.findById(newID).get().getLength(), length);
-    assertEquals(testFilmRepository.findById(newID).get().getRating(), rating);
+    @When("I try to add the film with title {string}, release year {int}, description {string}, length {int}, rating {string}")
+    public void i_try_to_add_the_film_with_title_release_year_description_length_rating(String title, Integer release_year, String description, Integer length, String rating) {
+        // Write code here that turns the phrase above into concrete actions
+
+        testFilm = new Film(title, release_year, description, length, rating);
+        testFilmRepository.save(testFilm);
+
+    }
+
+    @Then("The new film will be added to the database with title {string}, release year {int}, description {string}, length {int}, rating {string}")
+    public void the_new_film_will_be_added_to_the_database_with_title_release_year_description_length_rating(String title, int release_year, String description, int length, String rating) {
+        // Write code here that turns the phrase above into concrete actions
+        int newID = testFilmRepository.searchByTitleLike(title).get(0).getFilm_id();
+        assertEquals(testFilmRepository.findById(newID).get().getTitle(), title);
+        assertEquals(testFilmRepository.findById(newID).get().getRelease_year(), release_year);
+        assertEquals(testFilmRepository.findById(newID).get().getDescription(), description);
+        assertEquals(testFilmRepository.findById(newID).get().getLength(), length);
+        assertEquals(testFilmRepository.findById(newID).get().getRating(), rating);
+
 
     }
 

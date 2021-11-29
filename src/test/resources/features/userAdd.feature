@@ -5,8 +5,8 @@ Feature: Adding a new film
 
 Scenario: Users can add a new film to the database given they have all of the required information
 Given I have all of the information required about the film
-When I try to add the film with title "title", release year 2006, length 132, description "this is a film", rating "PG"
-Then The new film will be added to the database with title "title", release year 2006, length 132, description "this is a film", rating "R"
+When I try to add the film with title "title", release year 2006, description "this is a film", length 132, rating "R"
+Then The new film will be added to the database with title "title", release year 2006, description "this is a film", length 132, rating "R"
 
 
 #Scenario: User cannot add a new film to the database if they don't have all the information
