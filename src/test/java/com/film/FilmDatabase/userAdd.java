@@ -10,8 +10,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.Assert.assertEquals;
 
-
-
 @SpringBootTest
 public class userAdd {
 
@@ -19,7 +17,7 @@ public class userAdd {
 
 
 @Autowired
-    FilmRepository testFilmRepository;
+    FilmRepository DeleteTestFilmRepository;
 
 private Film testFilm;
 
@@ -37,22 +35,24 @@ private Film testFilm;
         // Write code here that turns the phrase above into concrete actions
 
         testFilm = new Film(title, release_year, description, length, rating);
-        testFilmRepository.save(testFilm);
+        DeleteTestFilmRepository.save(testFilm);
 
     }
 
     @Then("The new film will be added to the database with title {string}, release year {int}, description {string}, length {int}, rating {string}")
     public void the_new_film_will_be_added_to_the_database_with_title_release_year_description_length_rating(String title, int release_year, String description, int length, String rating) {
         // Write code here that turns the phrase above into concrete actions
-        int newID = testFilmRepository.searchByTitleLike(title).get(0).getFilm_id();
-        assertEquals(testFilmRepository.findById(newID).get().getTitle(), title);
-        assertEquals(testFilmRepository.findById(newID).get().getRelease_year(), release_year);
-        assertEquals(testFilmRepository.findById(newID).get().getDescription(), description);
-        assertEquals(testFilmRepository.findById(newID).get().getLength(), length);
-        assertEquals(testFilmRepository.findById(newID).get().getRating(), rating);
+        int newID = DeleteTestFilmRepository.searchByTitleLike(title).get(0).getFilm_id();
+        assertEquals(DeleteTestFilmRepository.findById(newID).get().getTitle(), title);
+        assertEquals(DeleteTestFilmRepository.findById(newID).get().getRelease_year(), release_year);
+        assertEquals(DeleteTestFilmRepository.findById(newID).get().getDescription(), description);
+        assertEquals(DeleteTestFilmRepository.findById(newID).get().getLength(), length);
+        assertEquals(DeleteTestFilmRepository.findById(newID).get().getRating(), rating);
 
 
     }
+
+    
 
 
 
