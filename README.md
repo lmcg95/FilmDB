@@ -1,7 +1,7 @@
 
 # Film Database App
 
-This project presents a list of films based on the mySQL sakila Database. Users can search for and add new films to the database using the front end which is stored in the repository FilmDBFront.
+This project presents a list of films based on the mySQL sakila Database. Users can search for and add new films to the database using the front end which is stored in the repository FilmDBFrontEnd.
 
 ## API Reference
 
