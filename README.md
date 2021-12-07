@@ -6,16 +6,14 @@ This project presents a list of films based on the mySQL sakila Database. Users 
 ## API Reference
 
 #### Get all films
-
-```http
 This is currently stored locally:
+```http
   GET http://localhost:8080/films
 ```
 
 #### Get all actors
-
-```http
 This is currently stored locally:
+```http
   GET http://localhost:8080/actors
 ```
 
